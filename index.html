@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Timer - Class to provide a simple canvas based graphical timer.</title>
+		<meta charset="utf-8">
+		<script src="src/timer.js"></script>
+		<style>
+			.timer_canvas {
+				display: block;
+				margin: auto;
+				background: #ccc;
+				border-radius: 10px;
+				border: solid 5px #000;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Timer test</h1>
+		</header>
+		<main>
+			<div id="timer_test"></div>
+			<button id="timer_start">Start Timer</button>
+		</main>
+	
+	<script>
+		var options = {
+			id: "timer_canvas01",
+			className: "timer_canvas",
+			color: "#0ff",
+			borderColor: "#000",
+			borderWith: 10,
+			size: 600
+		},
+		myTimer = new Timer( options );
+		
+		document.getElementById( "timer_test" ).appendChild( myTimer.canvas );
+		
+		document.getElementById( "timer_start" )
+			.addEventListener( "click", function ( event ) {
+				myTimer.start( 10, function ( timer ) {
+					alert( timer.id + " done!" );
+				} );
+			} );
+	</script>
+</html>
+		

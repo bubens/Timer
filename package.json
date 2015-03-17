@@ -1,0 +1,21 @@
+{
+  "name": "Timer",
+  "version": "0.0.0",
+  "description": "Class to provide a simle canvas based graphical timer.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bubens/Timer.git"
+  },
+  "keywords": [
+    "Timer",
+    "Javascript",
+    "canvas"
+  ],
+  "author": "Henning Beyer",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/bubens/Timer/issues"
+  },
+  "homepage": "https://github.com/bubens/Timer"
+}
