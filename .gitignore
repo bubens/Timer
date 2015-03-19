@@ -1,1 +1,3 @@
 Timer.geany
+*.attr
+*/*.attr
