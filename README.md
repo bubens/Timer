@@ -92,10 +92,3 @@ Things I might add some day:
 * More flexible way to pass durations.
 * Make the whole thing nicer.
 
-Disclaimer
-----------
-
-I'm just an amateur coding around at home. This timer is part of a project I'm currently working on. I know, there are probably other libraries and scripts out there that do the same thing better. But I wanted to do it on my own and in vanilla JS. This is what came out of it... no big thing, but it works!
-
-If you read this I'm already surprised. If you like it I'm also a little delighted. If you have something to say about it I'm even excited.
-
