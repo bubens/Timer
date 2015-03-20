@@ -13,12 +13,12 @@
  * @param {String} [options.className] ClassName of the canvas-element the timer is drawn upon.
  *
  * @example
- * 	var myTimer = new Timer({
+ * 	var myTimer = new Timer( {
  * 		size: 300,
  * 		color: "rgba(125, 70, 70, .3)",
  * 		borderWidth: 10,
  * 		borderColor: "#000"
- * 	});
+ * 	} );
  **/		
 var Timer = (function ( window, undefined ) {
 	"use strict";
@@ -30,7 +30,7 @@ var Timer = (function ( window, undefined ) {
 		className: "timer_canvas"
 	};
 	
-	// create a propably unique ID if none was given at instatiation
+	// create a propably unique ID if none was given at instantiation
 	function randID( key, len ) {
 		var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
 		l = len || 4, i,
@@ -105,78 +105,78 @@ var Timer = (function ( window, undefined ) {
 			}
 		}
 		
-		/**
-		* Stores the Timer`s size (width/height).
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute size
-		* @type Number
-		**/
+/**
+* Stores the Timer`s size (width/height).
+* Assignment after instantiation changes nothing.
+*
+* @attribute size
+* @type Number
+**/
 		this.size = opts.size;
 		
-		/**
-		* Stores the Timer`s color.
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute color
-		* @type String
-		**/
+/**
+* Stores the Timer`s color.
+* Assignment after instantiation changes nothing.
+*
+* @attribute color
+* @type String
+**/
 		this.color = opts.color;
 		
-		/**
-		* Stores the Timer`s border color.
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute borderColor
-		* @type String
-		**/
+/**
+* Stores the Timer`s border color.
+* Assignment after instantiation changes nothing.
+*
+* @attribute borderColor
+* @type String
+**/
 		this.borderColor = opts.borderColor;
 		
-		/**
-		* Stores the Timer`s border width.
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute borderWidth
-		* @type Number
-		**/
+/**
+* Stores the Timer`s border width.
+* Assignment after instantiation changes nothing.
+*
+* @attribute borderWidth
+* @type Number
+**/
 		this.borderWidth = opts.borderWidth;
 		
-		/**
-		* Stores the timespan the timer counts down.
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute timer
-		* @type Number
-		**/
+/**
+* Stores the timespan the timer counts down.
+* Assignment after instantiation changes nothing.
+*
+* @attribute timer
+* @type Number
+**/
 		this.time = null;
 		
-		/**
-		* Stores the ID of the canvas-alement the timer is drawn upon
-		* Assignment after instantiation changes nothing.
-		*
-		* @attribute id
-		* @type String
-		**/
+/**
+* Stores the ID of the canvas-alement the timer is drawn upon
+* Assignment after instantiation changes nothing.
+*
+* @attribute id
+* @type String
+**/
 		this.id = opts.id || randID( "timer" );
 		
-		/**
-		* Stores the canvas element on which the timer is drawn.
-		*
-		* @attribute canvas
-		* @type HTMLCanvasElement
-		**/
+/**
+* Stores the canvas element on which the timer is drawn.
+*
+* @attribute canvas
+* @type HTMLCanvasElement
+**/
 		this.canvas = document.createElement( "canvas" );
 		this.canvas.width = this.size;
 		this.canvas.height = this.size;
 		this.canvas.id = this.id;
 		this.canvas.className = opts.className;
 		
-		/**
-		* Stores the rendering context of the canvas element on whicht the timer is drawn.
-		*
-		* @attribute context
-		* @type CanvasRenderingContext2D
-		**/
+/**
+* Stores the rendering context of the canvas element on whicht the timer is drawn.
+*
+* @attribute context
+* @type CanvasRenderingContext2D
+**/
 		this.context = this.canvas.getContext( "2d" );
 		this.context.fillStyle = this.color;
 		this.context.strokeStyle = this.borderColor;
@@ -185,19 +185,19 @@ var Timer = (function ( window, undefined ) {
 		
 		drawTimer( 0 );
 		
-		/**
-		* Start or restart the timer.
-		*
-		* @method start
-		* @paran {Number} time Timespan to count down.
-		* @param {Function} [callback] Callback function to  be executed when the timer is done.
-		*
-		* @example
-		* 	var myTimer = new Timer( options );
-		* 	myTimer.start( 30, function ( timer ) {
-		* 		console.log( "%s`s done!", timer.id );
-		* 	} );
-		**/
+/**
+* Start or restart the timer.
+*
+* @method start
+* @paran {Number} time Timespan to count down.
+* @param {Function} [callback] Callback function to  be executed when the timer is done.
+*
+* @example
+* 	var myTimer = new Timer( options );
+* 		myTimer.start( 30, function ( timer ) {
+* 		console.log( "%s`s done!", timer.id );
+* 	} );
+**/
 		this.start = function ( time, callback ) {
 			if ( !running ) {
 				that.time = time * 1000;
@@ -207,9 +207,7 @@ var Timer = (function ( window, undefined ) {
 				frame();
 			}
 			
-		};
-		
-		
+		};		
 	}
 	
 	return ClassTimer;	
