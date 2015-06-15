@@ -1,5 +1,5 @@
 /**
- * Class to provide a simle canvas based graphical timer.
+ * Class to provide a simple canvas based graphical timer.
  * 
  * @class Timer
  * @constructor
