@@ -189,7 +189,7 @@ var Timer = (function ( window, undefined ) {
 * Start or restart the timer.
 *
 * @method start
-* @paran {Number} time Timespan to count down.
+* @param {Number} time Timespan to count down.
 * @param {Function} [callback] Callback function to  be executed when the timer is done.
 *
 * @example
