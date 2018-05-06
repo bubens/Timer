@@ -95,7 +95,7 @@ var Timer = (function ( window, undefined ) {
 			if ( running ) {
 				if ( delta > 0 ) {
 					drawTimer( ratio );
-					window.setTimeout( frame, 40 );
+					window.requestAnimationFrame( frame );
 				}
 				else {
 					that.context.clearRect( 0, 0, that.size, that.size );
@@ -204,7 +204,7 @@ var Timer = (function ( window, undefined ) {
 				targetTime = new Date().getTime() + that.time;
 				running = true;
 				fn = callback || function () {};
-				frame();
+				window.requestAnimationFrame( frame );
 			}
 			
 		};		
