@@ -1,5 +1,5 @@
 /**
- * Class to provide a simle canvas based graphical timer.
+ * Class to provide a simple canvas based graphical timer.
  * 
  * @class Timer
  * @constructor
@@ -189,7 +189,7 @@ var Timer = (function ( window, undefined ) {
 * Start or restart the timer.
 *
 * @method start
-* @paran {Number} time Timespan to count down.
+* @param {Number} time Timespan to count down.
 * @param {Function} [callback] Callback function to  be executed when the timer is done.
 *
 * @example
